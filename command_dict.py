@@ -1,3 +1,4 @@
+from command import invalidCmd
 
 class CommandDict():
     def setCmds(self, cmdList):
