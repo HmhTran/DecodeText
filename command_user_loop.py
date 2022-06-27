@@ -1,3 +1,4 @@
+from utilities import printDoubleSpaced
 from command import QuitCommand, HelpCommand, noneCmd, invalidCmd
 
 QUIT_COMMAND_NAMES = {"quit", "exit", "close"}
