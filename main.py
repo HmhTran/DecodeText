@@ -3,26 +3,12 @@ import os
 
 from command import QuitCommand, HelpCommand, noneCmd, invalidCmd
 from command_dict import CommandDict
+from page import DecodePage
 
 QUIT_COMMAND_NAMES = {"quit", "exit", "close"}
 
 def printDoubleSpaced(msg):
     print(f"\n{msg}\n")
-
-class APage(ABC):
-    def __init__(self, cmdList=[]):
-        self._cmdDict = CommandDict(cmdList)
-    
-    @abstractmethod
-    def display(self):
-        pass
-    
-    def getCmds(self):
-        return self._cmdDict
-
-class DecodePage(APage):
-    def display(self):
-        print("\nWelcome to DecodeText!")
 
 class CommandUserLoop():
     def __displayCmds(self):
